@@ -1,0 +1,29 @@
+{
+  "include": ["src/**/*", "__tests__/**/*"],
+  "exclude": ["node_modules/**/*", "dist/**/*"],
+  "compilerOptions": {
+    "outDir": "dist/dts/",
+    "lib": ["es6", "dom"],
+    // issue an error whenever it would have inferred any
+    "noImplicitAny": true,
+    // Raise error on ‘this’ expressions with an implied ‘any’ type.
+    "noImplicitThis": true,
+    // you’ll get a type error if you try to use null or undefined where a concrete value is expected.
+    "strictNullChecks": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    // Allow JavaScript files to be a part of your program.
+    "allowJs": true,
+    "moduleResolution": "node",
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+    // Allow importing non default export as default
+    "allowSyntheticDefaultImports": true,
+    // Rather than doing a full check of all d.ts files, TypeScript will type check the code you specifically refer to in your app’s source code.
+    "skipLibCheck": true,
+  },
+}
