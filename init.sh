@@ -40,15 +40,13 @@ npm install react-icons --save
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 
-### server
-npm install mongodb mongoose express cors dotenv helmet morgan jade express-handlebars
-npm install --save-dev nodemon
-
 ### typescript
 npm install --save-dev typescript
 npm install --save-dev @babel/preset-typescript
 #Alternative solution is ts-loader if we use tsc instead of babel to compile .ts file to .js
 # npm install --save-dev ts-loader
-npm install --save @types/node @types/react @types/react-dom @types/jest @types/react-router-dom @types/express @types/cors @types/debug
+npm install --save @types/node @types/react @types/react-dom @types/jest @types/react-router-dom
+
+
 
 

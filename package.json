@@ -1,17 +1,15 @@
 {
-  "name": "ciaoshen.com",
+  "name": "mern-employee",
   "version": "1.0.0",
-  "description": "",
+  "description": "An employee web application based on MERN stack.",
   "private": true,
-  "type": "module",
   "scripts": {
     "test": "jest",
     "build": "webpack",
     "watch": "webpack --watch",
-    "check": "tsc",
-    "start": "nodemon ./src/js/server/server.js"
+    "check": "tsc"
   },
-  "keywords": [],
+  "keywords": ["javascript", "react"],
   "author": "hireme.shen@gmail.com",
   "license": "MIT",
   "jest": {
@@ -58,6 +56,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "@types/react-router-dom": "^5.3.3",
+    "bootstrap": "^5.1.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
