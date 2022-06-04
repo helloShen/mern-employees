@@ -24,7 +24,8 @@ export default function RecordList() {
   const [records, setRecords] = useState([]);
 
   async function getRecords() {
-    const response = await fetch('http://localhost:5000/record');
+    // const response = await fetch('http://localhost:5000/record');
+    const response = await fetch('https://restful-employee.herokuapp.com/record');
     if (!response.ok) {
       window.alert(`An error occured: ${response.statusText}`);
       return;
@@ -34,7 +35,8 @@ export default function RecordList() {
   }
 
   async function deleteRecord(id) {
-    const response = await fetch(`http://localhost:5000/record/delete/${id}`);
+    // const response = await fetch(`http://localhost:5000/record/delete/${id}`);
+    const response = await fetch(`https://restful-employee.herokuapp.com/record/delete/${id}`);
     if (!response.ok) {
       window.alert(`An error occured: ${response.statusText}`);
       return;

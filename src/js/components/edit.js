@@ -12,12 +12,12 @@ export default function Edit(props) {
   });
 
   async function getRecord() {
-    const response = await fetch(`http://localhost:5000/record/${id}`);
+    // const response = await fetch(`http://localhost:5000/record/${id}`);
+    const response = await fetch(`https://restful-employee.herokuapp.com/record/${id}`);
     if (!response.ok) {
       window.alert(`An error occurred: ${response.statusText}`);
     }
     const data = await response.json();
-    console.log(data);
     setForm({
       name: data.name,
       position: data.position,
@@ -45,10 +45,9 @@ export default function Edit(props) {
      * we'll add a new record to the database.
      */
     const newEmployee = {...form};
-    console.log(newEmployee);
 
-    // await fetch('https://restful-employee.herokuapp.com/add', {
-    await fetch(`http://localhost:5000/record/edit/${id}`, {
+    // await fetch(`http://localhost:5000/record/edit/${id}`, {
+    await fetch(`https://restful-employee.herokuapp.com/record/edit/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -25,8 +25,8 @@ export default function Create() {
      */
     const newEmployee = {...form};
 
-    // await fetch('https://restful-employee.herokuapp.com/add', {
-    await fetch('http://localhost:5000/record/add', {
+    // await fetch('http://localhost:5000/record/add', {
+    await fetch('https://restful-employee.herokuapp.com/record/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
