@@ -21,15 +21,15 @@ export default function Navbar() {
               component="div"
               sx={{flexGrow: 1}}
             >
-              <Link className="nav-link" to="/mern-employees/">
+              <NavLink className="nav-link" to="/mern-employees/">
                 <span className="logo">
                   MERN = MongoDB + Express + React + Node
                 </span>
-              </Link>
+              </NavLink>
             </Typography>
-            <Link className="nav-link" to="/mern-employees/create">
+            <NavLink className="nav-link" to="/mern-employees/create">
               <Button color="inherit">Add Record</Button>
-            </Link>
+            </NavLink>
           </Toolbar>
         </AppBar>
       </Box>

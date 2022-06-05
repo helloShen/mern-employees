@@ -71,7 +71,7 @@ export default function Edit(props) {
       position: '',
       level: '',
     });
-    navigate('/');
+    navigate('/mern-employees/');
   }
 
   /* This following section will display the form that takes
