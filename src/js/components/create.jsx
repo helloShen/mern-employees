@@ -1,5 +1,15 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router';
+import {NavLink} from 'react-router-dom';
+import {
+  Box,
+  TextField,
+  Checkbox,
+  FormGroup,
+  FormControlLabel,
+  Button,
+  Paper,
+} from '@mui/material';
 
 export default function Create() {
   const [form, setForm] = useState({
@@ -47,82 +57,74 @@ export default function Create() {
   /* This following section will display the form that takes
     * the input from the user. */
   return (
-    <div>
-      <h3>Create New Record</h3>
-      <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            className="form-control"
+    <Box
+      className="formBox"
+      component="form"
+      noValidate
+      autoComplete="off"
+      onSubmit={onSubmit}
+    >
+      <h3 className="formBox__title">Create New Record</h3>
+      <Paper sx={{width: '360px', padding: '2em'}}>
+        <div className="formSection">
+          <TextField
+            required
             id="name"
-            value={form.name}
+            label="Name"
+            variant="filled"
             onChange={(e) => updateForm({name: e.target.value})}
+            sx={{width: '100%'}}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="position">Position</label>
-          <input
-            type="text"
-            className="form-control"
+        <div className="formSection">
+          <TextField
+            required
             id="position"
-            value={form.position}
+            label="Position"
+            variant="filled"
             onChange={(e) => updateForm({position: e.target.value})}
+            sx={{width: '100%'}}
           />
         </div>
-        <div className="form-group">
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="positionOptions"
-              id="positionIntern"
-              value="Intern"
-              checked={form.level === 'Intern'}
-              onChange={(e) => updateForm({level: e.target.value})}
-            />
-            <label
-              htmlFor="positionIntern"
-              className="form-check-label"
-            >Intern</label> </div>
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="positionOptions"
-              id="positionJunior"
-              value="Junior"
-              checked={form.level === 'Junior'}
-              onChange={(e) => updateForm({level: e.target.value})}
-            />
-            <label
-              htmlFor="positionJunior"
-              className="form-check-label"
-            >Junior</label></div>
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="positionOptions"
-              id="positionSenior"
-              value="Senior"
-              checked={form.level === 'Senior'}
-              onChange={(e) => updateForm({level: e.target.value})}
-            />
-            <label
-              htmlFor="positionSenior"
-              className="form-check-label"
-            >Senior</label>
-          </div>
-        </div>
-        <div className="form-group">
-          <input
-            type="submit"
-            value="Create person"
-            className="btn btn-primary"
+        <FormGroup className="formSection">
+          <FormControlLabel
+            control={
+              <Checkbox
+                value="Intern"
+                onChange={(e) => updateForm({level: e.target.value})}
+              />
+            }
+            label="Intern"
           />
-        </div>
-      </form>
-    </div>
+          <FormControlLabel
+            control={
+              <Checkbox
+                value="Junior"
+                onChange={(e) => updateForm({level: e.target.value})}
+              />
+            }
+            label="Junior"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                value="Senior"
+                onChange={(e) => updateForm({level: e.target.value})}
+              />
+            }
+            label="Senior"
+          />
+        </FormGroup>
+        <Button
+          type="submit"
+          variant="contained"
+        >
+          Submit
+        </Button>
+        <NavLink to="/">
+          <Button color="inherit" sx={{marginLeft: '1em'}}>Cancel</Button>
+        </NavLink>
+      </Paper>
+    </Box>
   );
 }

@@ -1,6 +1,9 @@
 @import url('./norm.css');
+/* google material icons */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap');
+/* Roboto & Poppins Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&family=Roboto+Slab:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
 
 :root {
 	--black: #24292d;
@@ -21,4 +24,52 @@
 .root {
 	min-height: 100vh;
 	background-color: var(--back-gray);
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  /* align-items: start; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  font-family: 'Roboto Slab', serif;
+}
+
+.recordsTable {
+  width: 100vw;
+  align-self: start;
+  display: grid;
+  justify-content: center;
+}
+
+.recordsTable__title {
+  margin: 2em 0;
+}
+
+.MuiTableHead-root.recordsTable__header .MuiTableCell-root {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.formSection {
+  margin: 1em 0;
+}
+
+.formBox {
+  display: grid;
+  justify-content: center;
+}
+
+.formBox__title {
+  margin: 2em 0;
+}
+
+.footer {
+  align-self: end;
 }
