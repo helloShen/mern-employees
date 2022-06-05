@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 // import Navbar from './components/navbar';
-import RecordList from './components/recordlist';
+import RecordList from './components/recordList';
 import Edit from './components/edit';
 import Create from './components/create';
 import Navbar from './components/navbar';
