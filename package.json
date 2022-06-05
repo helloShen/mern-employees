@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "An employee web application based on MERN stack.",
   "private": true,
+  "engines": {
+    "node": "16.15.0"
+  },
   "scripts": {
     "test": "jest",
     "build": "webpack --mode production --config ./webpack.config.js",
