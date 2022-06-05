@@ -13,9 +13,9 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<RecordList />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/edit/:id" exact element={<Edit />} />
+          <Route path="/mern-employees/" element={<RecordList />} />
+          <Route path="/mern-employees/create" element={<Create />} />
+          <Route path="/mern-employees/edit/:id" exact element={<Edit />} />
         </Routes>
         <Footer
           sourceCode="https://github.com/helloShen/mern-employees"

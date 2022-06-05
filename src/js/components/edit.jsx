@@ -147,7 +147,7 @@ export default function Edit(props) {
         >
           Submit
         </Button>
-        <NavLink to="/">
+        <NavLink to="/mern-employees/">
           <Button color="inherit" sx={{marginLeft: '1em'}}>Cancel</Button>
         </NavLink>
       </Paper>

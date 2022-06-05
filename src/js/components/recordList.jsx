@@ -20,7 +20,7 @@ const Record = (props) => (
     <TableCell>
       <Link
         className='btn btn-link'
-        to={`/edit/${props.record._id}`}
+        to={`/mern-employees/edit/${props.record._id}`}
       >
         <Button>Edit</Button>
       </Link>

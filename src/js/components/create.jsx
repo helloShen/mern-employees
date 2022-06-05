@@ -51,7 +51,7 @@ export default function Create() {
       position: '',
       level: '',
     });
-    navigate('/');
+    navigate('/mern-employees/');
   }
 
   /* This following section will display the form that takes
@@ -121,7 +121,7 @@ export default function Create() {
         >
           Submit
         </Button>
-        <NavLink to="/">
+        <NavLink to="/mern-employees/">
           <Button color="inherit" sx={{marginLeft: '1em'}}>Cancel</Button>
         </NavLink>
       </Paper>
