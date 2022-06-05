@@ -4,7 +4,7 @@
   "description": "An employee web application based on MERN stack.",
   "private": true,
   "scripts": {
-    "start": "webpack --watch",
+    "start": "webpack",
     "test": "jest",
     "build": "webpack",
     "watch": "webpack --watch",
