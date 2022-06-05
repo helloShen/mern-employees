@@ -13,7 +13,6 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<RecordList />} />
           <Route path="/mern-employees/" element={<RecordList />} />
           <Route path="/mern-employees/create" element={<Create />} />
           <Route path="/mern-employees/edit/:id" exact element={<Edit />} />
